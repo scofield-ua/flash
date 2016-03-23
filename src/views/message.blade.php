@@ -6,14 +6,8 @@
             'body'       => session('flash_notification.message')
         ])
     @else
-        <div class="alert alert-{{ session('flash_notification.level') }}">
-            <button type="button" 
-                    class="close" 
-                    data-dismiss="alert" 
-                    aria-hidden="true">&times;</button>
-
+        <div class="callout {{ session('flash_notification.level') }}">
             {!! session('flash_notification.message') !!}
-        </div>
+        </div>        
     @endif
 @endif
-
