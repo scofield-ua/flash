@@ -1,5 +1,7 @@
 # Easy Flash Messages
 
+> This package is optimized for use with Zurb Foundation 6.
+
 ## Installation
 
 First, pull in the package through Composer.
@@ -65,22 +67,6 @@ public function destroy()
     return home();
 }
 ```
-
-Or, for a general information flash, just do: `flash('Some message');`.
-
-With this message flashed to the session, you may now display it in your view(s). Maybe something like:
-
-```html
-@if (Session::has('flash_notification.message'))
-    <div class="alert alert-{{ Session::get('flash_notification.level') }}">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-
-        {{ Session::get('flash_notification.message') }}
-    </div>
-@endif
-```
-
-> Note that this package is optimized for use with Twitter Bootstrap.
 
 Because flash messages and overlays are so common, if you want, you may use (or modify) the views that are included with this package. Simply append to your layout view:
 
@@ -149,5 +135,3 @@ return Redirect::home();
 ```
 
 ![https://dl.dropboxusercontent.com/u/774859/GitHub-Repos/flash/overlay.png](https://dl.dropboxusercontent.com/u/774859/GitHub-Repos/flash/overlay.png)
-
-> [Learn exactly how to build this very package on Laracasts!](https://laracasts.com/lessons/flexible-flash-messages)
